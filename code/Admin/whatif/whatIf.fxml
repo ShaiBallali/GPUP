@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="602.0" prefWidth="920.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whatif.WhatIfController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" prefHeight="734.0" prefWidth="1184.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="115.0" minWidth="84.0" prefWidth="92.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="212.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="500.0" minWidth="10.0" prefWidth="249.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="168.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="322.0" minWidth="17.0" prefWidth="25.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="98.0" prefWidth="116.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="350.0" minWidth="81.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="15.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="49.0" minHeight="15.0" prefHeight="45.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="56.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="56.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="157.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="0.0" prefHeight="111.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="17.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="15.0" vgrow="NEVER" />
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="26.0" prefWidth="226.0" styleClass="header" text="What if" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="67.0" styleClass="header-1" text="Data:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="499.0" prefWidth="8.0" GridPane.columnIndex="5" GridPane.rowSpan="12">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Separator>
+                  <TextArea fx:id="whatIfMsgTA" maxHeight="300.0" prefHeight="162.0" prefWidth="700.0" styleClass="textarea" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </GridPane.margin>
+                  </TextArea>
+                  <HBox prefHeight="68.0" prefWidth="99.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="135.0" styleClass="header-1" text="Choose targets:" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label prefHeight="25.0" prefWidth="135.0" styleClass="header-1" text="Target:" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="targetSelectionCB" onAction="#targetSelectionCBAction" prefHeight="31.0" prefWidth="115.0" styleClass="button" GridPane.columnIndex="7" GridPane.hgrow="NEVER" GridPane.rowIndex="3" />
+                  <Button fx:id="filterBtn" mnemonicParsing="false" onAction="#filterBtnAction" prefHeight="31.0" prefWidth="66.0" text="Filter" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Button>
+                  <Label layoutX="698.0" layoutY="144.0" prefHeight="25.0" styleClass="header-1" text="Dependency:" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="dependencyCB" layoutX="798.0" layoutY="141.0" onAction="#dependencyCBAction" prefHeight="31.0" prefWidth="115.0" styleClass="button" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                  <StackPane GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="7">
+                     <children>
+                        <StackPane fx:id="tablePlaceHolder" prefHeight="483.0" prefWidth="644.0" />
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="33.0" styleClass="header-1" text="Displayed Graph:  ">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="displayedGraphLbl" prefHeight="37.0" styleClass="header-2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label alignment="TOP_LEFT" prefHeight="149.0" prefWidth="173.0" text="&quot;What If&quot; enables to get all targets that are in a &quot;Required For&quot; or &quot;Depends On&quot; dependency with the selected target, including transitive dependencies." wrapText="true" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2147483647" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

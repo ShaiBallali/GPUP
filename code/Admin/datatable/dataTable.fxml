@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datatable.DataTableController">
+   <children>
+      <TableView fx:id="datatableView" minHeight="300.0" minWidth="400.0" prefHeight="582.0" prefWidth="692.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="70.0" text="Name" />
+            <TableColumn fx:id="positionColumn" maxWidth="1.7976931348623157E308" prefWidth="70.0" text="Position" />
+            <TableColumn fx:id="directDependsOnColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="130.0" text="Direct Depends On" />
+            <TableColumn fx:id="allDependsOnColumn" maxWidth="1.7976931348623157E308" prefWidth="130.0" text="All Depends On" />
+            <TableColumn fx:id="directRequiredForColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="130.0" text="Direct Required For" />
+            <TableColumn fx:id="allRequiredForColumn" maxWidth="1.7976931348623157E308" minWidth="4.0" prefWidth="130.0" text="All Required For" />
+            <TableColumn fx:id="generalInfoColumn" maxWidth="1.7976931348623157E308" prefWidth="130.0" text="General Info" />
+         </columns>
+      </TableView>
+   </children>
+</StackPane>

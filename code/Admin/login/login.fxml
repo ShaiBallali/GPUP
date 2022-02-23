@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="background">
+         <content>
+            <GridPane minHeight="400.0" minWidth="600.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="128.0" minWidth="115.0" prefWidth="128.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="500.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="531.0" minWidth="86.0" prefWidth="104.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="182.0" minWidth="86.0" prefWidth="109.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="30.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="143.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="61.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="205.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="233.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="userNameTextField" onKeyTyped="#userNameKeyTyped" prefHeight="40.0" prefWidth="390.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <HBox maxHeight="40.0" prefHeight="70.0" prefWidth="202.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Button fx:id="loginButton" minWidth="70.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="40.0" prefWidth="84.0" text="Login">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button minWidth="70.0" mnemonicParsing="false" onAction="#quitButtonClicked" prefHeight="40.0" prefWidth="84.0" text="Quit">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label minHeight="40.0" minWidth="80.0" prefHeight="21.0" prefWidth="100.0" styleClass="header-1" text="Message:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="226.0" styleClass="header" text="Admin Login" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="errorMessageLabel" styleClass="header-2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="100.0" layoutY="230.0" styleClass="header-1" text="Username:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

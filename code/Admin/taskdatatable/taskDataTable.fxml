@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="tablePlaceHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taskdatatable.TaskDataTableController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" prefHeight="734.0" prefWidth="1184.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="115.0" minWidth="84.0" prefWidth="92.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="212.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="322.0" minWidth="20.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="113.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="350.0" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="49.0" minHeight="15.0" prefHeight="42.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="37.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="186.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="80.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="68.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="0.0" prefHeight="111.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="17.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="15.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="676.0" prefWidth="766.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="4" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane fx:id="tablePlaceHolder1">
+                           <children>
+                              <TableView fx:id="datatableView" minHeight="300.0" minWidth="400.0" prefHeight="720.0" prefWidth="1141.0">
+                                 <columns>
+                                    <TableColumn fx:id="selectColumn" maxWidth="1.7976931348623157E308" prefWidth="78.0" text="Select" />
+                                    <TableColumn fx:id="nameColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="70.0" text="Name" />
+                                    <TableColumn fx:id="positionColumn" maxWidth="1.7976931348623157E308" prefWidth="70.0" text="Position" />
+                                    <TableColumn fx:id="directDependsOnColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="130.0" text="Direct Depends On" />
+                                    <TableColumn fx:id="allDependsOnColumn" maxWidth="1.7976931348623157E308" prefWidth="130.0" text="All Depends On" />
+                                    <TableColumn fx:id="directRequiredForColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="130.0" text="Direct Required For" />
+                                    <TableColumn fx:id="allRequiredForColumn" maxWidth="1.7976931348623157E308" minWidth="4.0" prefWidth="130.0" text="All Required For" />
+                                    <TableColumn fx:id="generalInfoColumn" maxWidth="1.7976931348623157E308" prefWidth="130.0" text="General Info" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+                  <Label prefHeight="25.0" prefWidth="193.0" styleClass="header-1" text="Please Choose Targets:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="499.0" prefWidth="8.0" GridPane.columnIndex="5" GridPane.rowSpan="13">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Separator>
+                  <CheckBox fx:id="selectAllBtn" mnemonicParsing="false" styleClass="header-2" text="Select All" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <VBox prefHeight="200.0" prefWidth="213.0" spacing="10.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="193.0" styleClass="header-1" text="What if?">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="213.0" spacing="20.0">
+                           <children>
+                              <ComboBox fx:id="dependencyCB" maxWidth="-Infinity" minHeight="-Infinity" onAction="#dependencyCBAction" prefHeight="32.0" prefWidth="111.0" styleClass="button" />
+                              <Button fx:id="whatIfBtn" mnemonicParsing="false" onAction="#whatIfBtnAction" prefHeight="32.0" text="Execute " />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="207.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="clearSelectionBtn" mnemonicParsing="false" onAction="#clearSelectionBtnAction" prefHeight="31.0" prefWidth="150.0" text="Clear Selection" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="213.0" spacing="20.0" GridPane.rowIndex="1" />
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="11">
+                     <children>
+                        <Button fx:id="nextBtn" minWidth="-Infinity" mnemonicParsing="false" onAction="#nextBtnAction" prefHeight="35.0" prefWidth="168.0" text="Submit" />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="31.0" prefWidth="223.0" styleClass="header" text="Choose Targets" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="msgLbl" alignment="TOP_LEFT" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

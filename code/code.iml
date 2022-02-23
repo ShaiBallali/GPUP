@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Admin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Client" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="json" level="project" />
+    <orderEntry type="library" name="http" level="project" />
+    <orderEntry type="library" name="executable" level="project" />
+    <orderEntry type="module" module-name="MutualConfig" />
+    <orderEntry type="module" module-name="ClientEngine" />
+    <orderEntry type="module" module-name="Dto" />
+    <orderEntry type="module" module-name="engine" />
+  </component>
+</module>

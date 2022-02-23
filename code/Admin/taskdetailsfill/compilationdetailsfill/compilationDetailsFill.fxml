@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="tablePlaceHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taskdetailsfill.compilationdetailsfill.CompilationDetailsFillController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" prefHeight="734.0" prefWidth="1054.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="115.0" minWidth="84.0" prefWidth="92.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="212.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="217.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="30.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="15.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="135.0" minHeight="25.0" prefHeight="25.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="157.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="161.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="20.0" prefHeight="20.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="header-1" text="Please fill the data below:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox minHeight="100.0" minWidth="200.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="3">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="732.0" spacing="30.0">
+                           <children>
+                              <Label styleClass="header-1" text="Path of main directory (must exist):">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mainDirectoryPathTF" alignment="CENTER" maxWidth="-Infinity" onMouseClicked="#mainDirectoryTFMouseClick" prefHeight="44.0" prefWidth="496.0" styleClass="textfield">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="chooseMainPathBtn" mnemonicParsing="false" onAction="#chooseMainPathBtnAction" text="Choose Path" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <Label styleClass="header-1" text="Path of directory to compile into:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="destDirectoryPathTF" alignment="CENTER" maxWidth="-Infinity" prefHeight="44.0" prefWidth="496.0" styleClass="textfield">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="chooseDestPathBtn" mnemonicParsing="false" onAction="#chooseDestPathBtnAction" text="Choose Path" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="msgLbl" prefHeight="43.0" prefWidth="527.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <Label styleClass="header-1" text="Execution Name:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="executionNameTF" maxWidth="-Infinity" prefHeight="36.0" prefWidth="145.0" styleClass="textfield">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="msgLbl" prefHeight="37.0" styleClass="header-1">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                     <children>
+                        <Button fx:id="executeBtn" mnemonicParsing="false" onAction="#executeBtnAction" prefHeight="39.0" prefWidth="146.0" text="Start! " />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

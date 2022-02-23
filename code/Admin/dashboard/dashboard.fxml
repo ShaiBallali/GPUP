@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="tablePlaceHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashboardController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" onMousePressed="#gridPaneMousePressed" prefHeight="734.0" prefWidth="1184.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="250.0" minWidth="100.0" prefWidth="190.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="23.0" prefWidth="23.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="25.0" prefWidth="25.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="250.0" minWidth="100.0" prefWidth="190.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="400.0" minWidth="100.0" prefWidth="212.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="356.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="15.0" prefHeight="39.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="51.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="41.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="98.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="78.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="72.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="0.0" prefHeight="76.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="105.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="31.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <TableView fx:id="usersTable" minHeight="300.0" minWidth="130.0" prefHeight="585.0" prefWidth="172.0">
+                                 <columns>
+                                    <TableColumn fx:id="usernameColumn" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" text="Username" />
+                                    <TableColumn fx:id="roleColumn" maxWidth="1.7976931348623157E308" minWidth="21.0" prefWidth="91.0" text="Role" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER_LEFT" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="231.0" styleClass="header-1" text="Graphs:">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="213.0" spacing="20.0" GridPane.rowIndex="1" />
+                  <Label prefHeight="31.0" prefWidth="452.0" styleClass="header" text="Dashboard" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <StackPane layoutX="40.0" layoutY="151.0" maxHeight="1.7976931348623157E308" prefHeight="340.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane prefHeight="593.0" prefWidth="169.0">
+                           <children>
+                              <TableView fx:id="graphsTable" onMousePressed="#graphsMousePressed" prefHeight="584.0" prefWidth="225.0">
+                                <columns>
+                                    <TableColumn fx:id="graphnameColumn" maxWidth="236.0" prefWidth="193.0" text="Graph Name" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="280.0" layoutY="82.0" prefHeight="25.0" prefWidth="231.0" styleClass="header-1" text="Users:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.rowSpan="4">
+                     <children>
+                        <Label fx:id="chosenGraphLbl" layoutX="10.0" layoutY="10.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="uploadingUserLbl" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="totalTargetsLbl" layoutX="10.0" layoutY="10.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="independentLbl" layoutX="10.0" layoutY="10.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="leafLbl" layoutX="10.0" layoutY="45.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="middleLbl" layoutX="10.0" layoutY="115.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="rootLbl" layoutX="10.0" layoutY="150.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="compilationPrice" layoutX="10.0" layoutY="115.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="simulationPrice" layoutX="10.0" layoutY="150.0" lineSpacing="7.0" styleClass="header-2">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <Label alignment="TOP_LEFT" prefHeight="89.0" prefWidth="400.0" styleClass="header-2" text="Double-clicking a graph will enable: &quot;Graph Actions&quot; button on the left navigation bar, &quot;Create Simulation&quot; button and &quot;Create Compilation&quot; button. Additionaly, it will show the graph details." wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <StackPane prefHeight="593.0" prefWidth="169.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.rowSpan="4">
+                     <children>
+                        <TableView fx:id="executionTable" onMousePressed="#executionMousePressed" prefHeight="443.0" prefWidth="345.0">
+                           <columns>
+                              <TableColumn fx:id="executionNameColumn" maxWidth="236.0" prefWidth="53.0" text="Name" />
+                              <TableColumn fx:id="createdByColumn" maxWidth="236.0" prefWidth="100.0" text="Created By" />
+                              <TableColumn fx:id="graphExecutionNameColumn" maxWidth="236.0" prefWidth="100.0" text="Graph Name" />
+                              <TableColumn fx:id="targetAmountColumn" maxWidth="236.0" prefWidth="127.0" text="Target Amount" />
+                              <TableColumn fx:id="rootsColumn" maxWidth="236.0" prefWidth="65.0" text="Roots" />
+                              <TableColumn fx:id="middlesColumn" maxWidth="236.0" prefWidth="90.0" text="Middles" />
+                              <TableColumn fx:id="leavesColumn" maxWidth="236.0" prefWidth="90.0" text="Leaves" />
+                              <TableColumn fx:id="independentsColumn" maxWidth="236.0" prefWidth="120.0" text="Independents" />
+                              <TableColumn fx:id="totalPriceColumn" maxWidth="236.0" prefWidth="150.0" text="Total Price" />
+                              <TableColumn fx:id="totalWorkersColumn" maxWidth="236.0" prefWidth="150.0" text="Total Workers" />
+                              <TableColumn fx:id="statusColumn" maxWidth="236.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </StackPane>
+                  <Label prefHeight="25.0" prefWidth="231.0" styleClass="header-1" text="Executions:" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="277.0" prefWidth="211.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.rowSpan="4" GridPane.valignment="CENTER">
+                     <children>
+                        <Button fx:id="fromScratchBtn" layoutX="45.0" layoutY="90.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#fromScratchBtnAction" prefHeight="41.0" prefWidth="201.0" text="Run From Scratch">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin></Button>
+                        <Button fx:id="incrementalBtn" layoutX="45.0" layoutY="151.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#incrementalBtnAction" prefHeight="41.0" prefWidth="201.0" text="Run Incremental">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="createSimulationBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createSimulationBtnAction" prefHeight="41.0" prefWidth="201.0" text="Create Simulation">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="createCompilationBtn" layoutX="32.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createCompilationBtnAction" prefHeight="41.0" prefWidth="201.0" text="Create Compilation">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="executionControlBtn" layoutX="44.0" layoutY="89.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#executionControlBtnAction" prefHeight="41.0" prefWidth="201.0" text="Execution Control Panel">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <StackPane layoutX="687.0" layoutY="151.0" prefHeight="593.0" prefWidth="169.0" GridPane.columnIndex="6" GridPane.rowIndex="10" GridPane.rowSpan="2">
+                     <children>
+                        <TableView fx:id="selfExecutionTable" onMousePressed="#selfExecutionsMousePressed" prefHeight="443.0" prefWidth="345.0">
+                           <columns>
+                              <TableColumn fx:id="executionNameColumn1" maxWidth="236.0" prefWidth="53.0" text="Name" />
+                              <TableColumn fx:id="createdByColumn1" maxWidth="236.0" prefWidth="100.0" text="Created By" />
+                              <TableColumn fx:id="graphExecutionNameColumn1" maxWidth="236.0" prefWidth="100.0" text="Graph Name" />
+                              <TableColumn fx:id="targetAmountColumn1" maxWidth="236.0" prefWidth="127.0" text="Target Amount" />
+                              <TableColumn fx:id="rootsColumn1" maxWidth="236.0" prefWidth="65.0" text="Roots" />
+                              <TableColumn fx:id="middlesColumn1" maxWidth="236.0" prefWidth="90.0" text="Middles" />
+                              <TableColumn fx:id="leavesColumn1" maxWidth="236.0" prefWidth="90.0" text="Leaves" />
+                              <TableColumn fx:id="independentsColumn1" maxWidth="236.0" prefWidth="120.0" text="Independents" />
+                              <TableColumn fx:id="totalPriceColumn1" maxWidth="236.0" prefWidth="150.0" text="Total Price" />
+                              <TableColumn fx:id="totalWorkersColumn1" maxWidth="236.0" prefWidth="150.0" text="Total Workers" />
+                              <TableColumn fx:id="statusColumn1" maxWidth="236.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="687.0" layoutY="118.0" prefHeight="25.0" prefWidth="293.0" styleClass="header-1" text="Executions Created By Current User:" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="231.0" styleClass="header-1" text="Graph Details:">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label alignment="TOP_LEFT" prefHeight="103.0" prefWidth="355.0" styleClass="header-2" text="Double-clicking an execution will enable &quot;Run From Scratch&quot; / &quot;Run Incremental&quot; if the execution has already been performed at least once. " wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="90.0" prefWidth="350.0" styleClass="header-2" text="Double-clicking a self-made execution will enable to access &quot;Execution Control Panel&quot;, where the admin can collect data of the current run." wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_LEFT" layoutX="277.0" layoutY="78.0" prefHeight="89.0" prefWidth="191.0" styleClass="header-2" text="All connected users" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

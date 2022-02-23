@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="tablePlaceHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="currentlyrunning.CurrentlyRunningController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" onMousePressed="#gridPaneMousePressed" prefHeight="734.0" prefWidth="1184.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="548.0" minWidth="100.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="500.0" minWidth="100.0" prefWidth="269.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="212.0" minWidth="0.0" prefWidth="32.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="268.0" minWidth="9.0" prefWidth="9.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="721.0" minWidth="100.0" prefWidth="274.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="467.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="76.0" minHeight="30.0" prefHeight="76.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="97.0" minHeight="15.0" prefHeight="49.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="47.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="88.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="80.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="68.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="28.0" prefHeight="33.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="100.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="133.0" minHeight="53.0" prefHeight="53.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="52.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" prefHeight="473.0" prefWidth="464.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="5">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <TableView fx:id="targetsTable" minHeight="300.0" minWidth="131.0" onMousePressed="#targetsTableMousePressed" prefHeight="457.0" prefWidth="464.0">
+                                 <columns>
+                                    <TableColumn fx:id="executionNameColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="160.0" text="Execution Name" />
+                                    <TableColumn fx:id="taskTypeColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="105.0" text="Task Type" />
+                                    <TableColumn fx:id="targetNameColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="105.0" text="Target Name" />
+                                    <TableColumn fx:id="stateColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="59.0" text="State" />
+                                    <TableColumn fx:id="pricePaidColumn" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" text="Price Paid" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </StackPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="213.0" spacing="20.0" GridPane.rowIndex="1" />
+                  <Label prefHeight="31.0" prefWidth="452.0" styleClass="header" text="Mid Run" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <StackPane layoutX="40.0" layoutY="151.0" maxHeight="1.7976931348623157E308" prefHeight="340.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <TableView fx:id="executionTable" onMousePressed="#executionMousePressed" prefHeight="607.0" prefWidth="560.0">
+                                <columns>
+                                  <TableColumn fx:id="nameColumn" prefWidth="55.0" text="Name" />
+                                  <TableColumn fx:id="totalWorkersColumn" maxWidth="158.0" prefWidth="127.0" text="Total Workers" />
+                                    <TableColumn fx:id="totalCreditsColumn" maxWidth="222.0" prefWidth="136.0" text="Total Credits" />
+                                    <TableColumn fx:id="activityStatusColumn" maxWidth="222.0" prefWidth="109.0" text="Is Paused?" />
+                                    <TableColumn fx:id="progressColumn" maxWidth="222.0" prefWidth="100.0" text="Progress" />
+                                    <TableColumn fx:id="targetsCompletedColumn" maxWidth="222.0" prefWidth="220.0" text="Targets Completed" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="8.0" />
+                     </GridPane.margin>
+                  </StackPane>
+                  <Separator layoutX="792.0" layoutY="10.0" orientation="VERTICAL" prefHeight="499.0" prefWidth="8.0" GridPane.columnIndex="4" GridPane.rowSpan="2147483647" />
+                  <HBox alignment="CENTER" spacing="40.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="12">
+                     <children>
+                        <Button fx:id="pauseButton" alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#pauseButtonAction" prefHeight="37.0" prefWidth="94.0" text="Pause">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="resumeButton" alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#resumeButtonAction" prefHeight="37.0" prefWidth="90.0" text="Resume">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="unsubscribeButton" alignment="CENTER" layoutX="119.0" layoutY="18.0" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#unsubscribeMousePressed" prefHeight="37.0" prefWidth="185.0" text="Unsubscribe" />
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="177.0" styleClass="header-1" text="Targets:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="msgTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin></TextArea>
+                  <Label prefHeight="25.0" prefWidth="177.0" styleClass="header-1" text="Logs:" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="296.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="175.0" styleClass="header-2" text="Total Number of Threads:" />
+                              <Label fx:id="numberOfThreadsLbl" styleClass="header-2" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="176.0" styleClass="header-2" text="Number of Busy Threads:">
+                                 <HBox.margin>
+                                    <Insets top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="numberOfBusyThreadsLbl" prefHeight="21.0" styleClass="header-2" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="msgLbl" alignment="CENTER" styleClass="header-2" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="25.0" styleClass="header-1" text="Execution Tasks:">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="27.0" styleClass="header-1" text="Currently Chosen:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="chosenLbl" prefHeight="30.0" styleClass="header-2" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label prefHeight="76.0" prefWidth="628.0" styleClass="header-2" text="Double-click an execution to perform actions. Only enabled executions by an admin are eligible. Unsubscribing/pausing an execution does not necessarily mean the execution will be terminated immidiately." wrapText="true" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

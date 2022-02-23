@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AdminAppController">
+   <content>
+      <BorderPane fx:id="mainBorderPane" minHeight="200.0" minWidth="300.0" prefHeight="790.0" prefWidth="1239.0">
+         <center>
+            <StackPane fx:id="centerStackPane" minHeight="160.0" minWidth="200.0" prefHeight="790.0" prefWidth="1033.0" />
+         </center>
+         <left>
+            <StackPane minHeight="80.0" minWidth="100.0" prefHeight="790.0" prefWidth="228.0" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="tablePlaceHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="792.0" prefWidth="1054.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashboardController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+         <content>
+            <GridPane minHeight="600.0" minWidth="700.0" onMousePressed="#gridPaneMousePressed" prefHeight="734.0" prefWidth="1184.0" styleClass="background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="191.0" minWidth="191.0" prefWidth="191.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="23.0" minWidth="10.0" prefWidth="23.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="23.0" minWidth="10.0" prefWidth="23.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="348.0" minWidth="200.0" prefWidth="348.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="407.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="30.0" prefWidth="15.0" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="114.0" minHeight="30.0" prefHeight="54.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="114.0" minHeight="30.0" prefHeight="77.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="52.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="123.0" minHeight="15.0" prefHeight="41.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="56.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="73.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="80.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="68.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="0.0" prefHeight="111.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="529.0" minHeight="10.0" prefHeight="17.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="53.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="52.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="101.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <TableView fx:id="usersTable" minHeight="300.0" minWidth="131.0" onMousePressed="#userListMousePressed" prefHeight="618.0" prefWidth="131.0">
+                                 <columns>
+                                    <TableColumn fx:id="usernameColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="92.0" text="Username" />
+                                    <TableColumn fx:id="roleColumn" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="98.0" text="Role" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+                  <Label prefHeight="25.0" prefWidth="231.0" styleClass="header-1" text="Execution Tasks:" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="52.0" styleClass="header-2" text="Credits:" />
+                        <Label fx:id="creditsLbl" prefHeight="21.0" prefWidth="192.0" styleClass="header-2" />
+                        <Label prefHeight="21.0" prefWidth="131.0" styleClass="header-2" text="Chosen Execution:" />
+                        <Label fx:id="chosenLbl" styleClass="header-2" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="213.0" spacing="20.0" GridPane.rowIndex="1" />
+                  <Label prefHeight="31.0" prefWidth="452.0" styleClass="header" text="Dashboard" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Algerian" size="23.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <StackPane layoutX="40.0" layoutY="151.0" maxHeight="1.7976931348623157E308" prefHeight="340.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="8">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <TableView fx:id="executionTable" onMousePressed="#executionMousePressed" prefHeight="607.0" prefWidth="560.0">
+                                <columns>
+                                  <TableColumn fx:id="nameColumn" prefWidth="55.0" text="Name" />
+                                  <TableColumn fx:id="submittingUserColumn" maxWidth="158.0" prefWidth="127.0" text="Submitting User" />
+                                    <TableColumn fx:id="taskTypeColumn" maxWidth="174.0" prefWidth="81.0" text="Task Type" />
+                                    <TableColumn fx:id="targetsCountColumn" maxWidth="222.0" prefWidth="112.0" text="Targets Count" />
+                                    <TableColumn fx:id="independentColumn" maxWidth="241.0" prefWidth="100.0" text="Independent" />
+                                    <TableColumn fx:id="leafColumn" maxWidth="176.0" prefWidth="50.0" text="Leaf" />
+                                    <TableColumn fx:id="rootColumn" maxWidth="176.0" prefWidth="50.0" text="Root" />
+                                    <TableColumn fx:id="middleColumn" maxWidth="236.0" prefWidth="60.0" text="Middle" />
+                                    <TableColumn fx:id="targetPriceColumn" maxWidth="236.0" prefWidth="150.0" text="Price For Each Target" />
+                                    <TableColumn fx:id="statusColumn" maxWidth="236.0" prefWidth="52.0" text="Status" />
+                                    <TableColumn fx:id="numOfExecutorsColumn" maxWidth="236.0" prefWidth="170.0" text="Total Workers" />
+                                    <TableColumn fx:id="isRegisteredColumn" maxWidth="236.0" prefWidth="100.0" text="Is Registered" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+                  <Separator layoutX="792.0" layoutY="10.0" orientation="VERTICAL" prefHeight="499.0" prefWidth="8.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" />
+                  <Button fx:id="registerButton" alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="37.0" prefWidth="109.0" text="Register" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="13" />
+                  <Label fx:id="msgLbl" prefHeight="35.0" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+                  <Label styleClass="header-2" text="Connected users:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label styleClass="header-2" text="Double-clicking an execution will enable &quot;Register&quot; button. Only non-finished executions are eligible." wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>
